@@ -55,7 +55,7 @@ public class TerrainGeneration : MonoBehaviour
     }
     float WaterSine(float x)
     {
-        return Mathf.Sin(x * waveLength/size + waterOffset) * waterAmplitude * size;
+        return Mathf.Sin(x * waveLength/size + waterOffset + perlinXOffset) * waterAmplitude * size;
     }
     bool AboveStone(float y)
     {
