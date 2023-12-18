@@ -9,7 +9,7 @@ public class TerrainGeneration : MonoBehaviour
     MeshFilter mf;
     MeshRenderer mr;
     [Range(5, 800)]
-    [SerializeField] int segments = 650; //number of verticies in a row, total vertex count = segments * segments
+    [SerializeField] int segments = 440; //number of verticies in a row, total vertex count = segments * segments
     [Range(0.1f,90)]
     [SerializeField] float size = 20;
     [Range(-20f, 30)]
@@ -31,13 +31,13 @@ public class TerrainGeneration : MonoBehaviour
     [Range(-1,1)]
     [SerializeField] float snowY = 0.4f;
     [Range(-1, 1)]
-    [SerializeField] float stoneY = 0.2f;
-    [Range(-1, 2)]
-    [SerializeField] float lavaY = 0.6f;
+    [SerializeField] float stoneY = 0.1f;
+    [Range(-1, 5)]
+    [SerializeField] float lavaY = 5f;
     [Range(0.1f, 5)]
     [SerializeField] float lavaDepth = 2f;
     [Range(1, 10)]
-    [SerializeField] int FractalBrownianOctaves = 4;
+    [SerializeField] int FractalBrownianOctaves = 5;
     [Range(0, 100)]
     [SerializeField] int cullingSkips = 15;
     [Range(0, 1)]
