@@ -36,7 +36,6 @@ public class PatrolComponent : MonoBehaviour
     private void SetupTree()
     {
         Node l1 = new IsWithinRange(target, transform, detectionRange);
-        //  Node l2 = new GoToTargetHampter(target, agent, animator);
 
         Node run = new Run(sprintTime, sprintCooldown, sprintSpeed, agent, animator, target);
         Node walk = new Walk(agent, animator, target);
@@ -57,6 +56,7 @@ public class PatrolComponent : MonoBehaviour
     {
         if (root.Evaluate() == NodeState.Success)
         {
+            print("player touched by guard");
             //StartCoroutine(ShowJumpscare(jumpscareImage));
         }
     }
