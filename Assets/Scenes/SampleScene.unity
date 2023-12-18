@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TG: {fileID: 1094512024}
   speed: 2
-  lookSens: 0.05
+  lookSens: 0.8
 --- !u!43 &379857835
 Mesh:
   m_ObjectHideFlags: 0
