@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ef08afd438253479076dfc0a90df4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 440
+  segments: 300
   size: 20
   amplitude: 2.5
   perlinScale: 150
@@ -944,7 +944,7 @@ MonoBehaviour:
   lavaY: 5
   lavaDepth: 2
   FractalBrownianOctaves: 5
-  cullingSkips: 10
+  cullingSkips: 7
   cullingMargin: 0.8
   Camera: {fileID: 2097263730}
 --- !u!23 &1094512025
@@ -2181,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2043839363}
+    - target: {fileID: 6339696696612121564, guid: fe1225e942df8374f91dfeec3436652d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 399fb1cc39639ca47a1dea54a215124a, type: 2}
     - target: {fileID: 6636747076830273970, guid: fe1225e942df8374f91dfeec3436652d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1
