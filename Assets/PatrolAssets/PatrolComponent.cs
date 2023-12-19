@@ -60,10 +60,10 @@ public class PatrolComponent : MonoBehaviour
             print("player touched by guard");
             //StartCoroutine(ShowJumpscare(jumpscareImage));
         }
-        if (Vector2.Distance(new(agent.transform.position.x, agent.transform.position.z), new(target.position.x, target.position.z)) <= 1)
+        if (Vector2.Distance(new(agent.transform.position.x, agent.transform.position.z), new(target.position.x, target.position.z)) <= 1 && !TextPlane.isMoving)
         {
-            //Time.timeScale = 0;
-            EditorApplication.isPaused = true;
+            print("player touched by guard");
+            EditorApplication.isPlaying = false;
         }
     }
     void OnAnimatorMove()

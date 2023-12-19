@@ -9,6 +9,7 @@ public class TextPlane : MonoBehaviour
     [SerializeField] Camera cam;
     bool inside = false;
     bool move = false;
+    public static bool isMoving = false;
     float speed = 10;
 
     void Start()
@@ -26,6 +27,7 @@ public class TextPlane : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 move = true;
+                isMoving = true;
                 cam.enabled = true;
                 Invoke("LoadScene", 5f);
             }
