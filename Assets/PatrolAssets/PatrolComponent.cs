@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using static PatrolBehavior;
@@ -58,6 +59,12 @@ public class PatrolComponent : MonoBehaviour
         {
             print("player touched by guard");
             //StartCoroutine(ShowJumpscare(jumpscareImage));
+        }
+        print(Vector2.Distance(new(agent.transform.position.x, agent.transform.position.z), new(target.position.x, target.position.z)));
+        if (Vector2.Distance(new(agent.transform.position.x, agent.transform.position.z), new(target.position.x, target.position.z)) <= 1)
+        {
+            //Time.timeScale = 0;
+            EditorApplication.isPaused = true;
         }
     }
     void OnAnimatorMove()
