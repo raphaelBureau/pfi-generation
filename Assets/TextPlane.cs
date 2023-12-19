@@ -26,6 +26,7 @@ public class TextPlane : MonoBehaviour
             tmp.transform.Rotate(0, 180, 0);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                tmp.enabled = false;
                 move = true;
                 isMoving = true;
                 cam.enabled = true;
