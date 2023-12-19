@@ -55,7 +55,7 @@ public class PatrolBehavior : MonoBehaviour
                     State = NodeState.Running;
                     animator.SetBool("walking", true);
                     animator.SetBool("running", false);
-                    animator.SetFloat("Speed", 1);
+                    //animator.SetFloat("Speed", 1);
                 }
                 return State;
             }
@@ -84,7 +84,8 @@ public class PatrolBehavior : MonoBehaviour
         }
         public override NodeState Evaluate() //retorune succes si en cooldown
         {
-            if(!waiting)
+            print(animator.GetBool("running"));
+            if (!waiting)
             {
                 agent.destination = target.position;
                 if (agent.SetDestination(target.position))
@@ -94,7 +95,7 @@ public class PatrolBehavior : MonoBehaviour
                         State = NodeState.Success; //la partie est termine parceque le target est touche
                         animator.SetBool("running", false);
                         animator.SetBool("walking", false);
-                        animator.SetFloat("Speed", 1);
+                        //animator.SetFloat("Speed", 1);
                         print("touching");
                     }
                     else
@@ -103,9 +104,10 @@ public class PatrolBehavior : MonoBehaviour
                         State = NodeState.Running; //actuellement running lol
                         animator.SetBool("running", true);
                         animator.SetBool("walking", true);
-                        animator.SetFloat("Speed", speed);
+                        //animator.SetFloat("Speed", speed);
+                        print("runin");
                     }
-                    if(stamina >= runTime)
+                    if (stamina >= runTime)
                     {
                        // print("stamina exhausted");
                         waiting = true;
@@ -163,7 +165,7 @@ public class PatrolBehavior : MonoBehaviour
                     }
                     animator.SetBool("walking", true);
                     animator.SetBool("running", false);
-                    animator.SetFloat("Speed", 1);
+                    //animator.SetFloat("Speed", 1);
                     return State = NodeState.Running;
                 }
                 animator.SetBool("walking", false);
